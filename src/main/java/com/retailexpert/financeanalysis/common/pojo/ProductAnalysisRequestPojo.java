@@ -10,20 +10,20 @@ import lombok.Setter;
 import java.util.Date;
 
 @JsonPropertyOrder({
-        "dateFrom",
-        "dateTo"
+        "monthFrom",
+        "monthTo"
 })
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Getter
 @Setter
 public class ProductAnalysisRequestPojo {
 
-    @JsonProperty(value = "dateFrom")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-mm-dd")
-    private Date dateFrom;
+    @JsonProperty(value = "monthFrom")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM")
+    private Date monthFrom;
 
-    @JsonProperty(value = "dateTo")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-mm-dd")
-    private Date dateTo;
+    @JsonProperty(value = "monthTo")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM")
+    private Date monthTo;
 
 }

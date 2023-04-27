@@ -26,10 +26,6 @@ public class Product {
     private Long l3ProductCategoryCode;
 
     @Column(name = "l3_product_category_name")
-    private Long l3ProductCategoryName;
-
-    @Transient
-    @OneToMany(mappedBy = "material_no", targetEntity = Price.class, fetch = FetchType.EAGER)
-    private List<Price> priceList;
+    private String l3ProductCategoryName;
 
 }

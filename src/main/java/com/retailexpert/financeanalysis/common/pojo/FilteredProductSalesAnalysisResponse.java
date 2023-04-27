@@ -3,6 +3,8 @@ package com.retailexpert.financeanalysis.common.pojo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
@@ -10,9 +12,11 @@ import java.util.List;
         "products"
 })
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class MonthPojo {
+@Getter
+@Setter
+public class FilteredProductSalesAnalysisResponse {
 
     @JsonProperty(value = "products")
-    private List<ProductPojo> products;
+    private List<FilteredSalesProductPojo> products;
 
 }

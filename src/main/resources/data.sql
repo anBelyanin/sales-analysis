@@ -39,12 +39,12 @@ CREATE TABLE actuals
     chain_name VARCHAR2(255),
     volume INT,
     actual_sales_value NUMERIC(19,6),
-    ship_type VARCHAR2(20) NOT NULL DEFAULT 'Regular',
-    FOREIGN KEY (ch3_ship_to_code) REFERENCES customers(ch3_ship_to_code),
-    FOREIGN KEY (material_no) REFERENCES products(material_no)
+    ship_type VARCHAR2(20) NOT NULL DEFAULT 'Regular'
 );
 INSERT INTO actuals(date, material_no, ch3_ship_to_code, chain_name, volume, actual_sales_value)
 SELECT * FROM CSVREAD('classpath:tables-data/actuals.csv', null, 'charset=UTF-8 fieldSeparator=;');
+
+CREATE INDEX actuals_materialNo_idx ON actuals(material_no, date);
 
 UPDATE actuals a
 SET a.ship_type = 'Promo'

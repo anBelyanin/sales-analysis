@@ -1,0 +1,26 @@
+{
+	"info": {
+		"_postman_id": "592dabcb-4048-470f-ac72-9a717a13bfd0",
+		"name": "finance-analysis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14796400"
+	},
+	"item": [
+		{
+			"name": "product-sales-analysis",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "product-sales-filtered",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

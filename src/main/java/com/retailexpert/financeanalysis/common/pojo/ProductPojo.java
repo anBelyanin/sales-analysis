@@ -10,11 +10,8 @@ import java.util.List;
 
 @JsonPropertyOrder({
         "materialNo",
-        "month",
-        "regularSellVolume",
-        "promoSellVolume",
-        "promoPercentage",
-        "chainSales"
+        "chainSales",
+        "category"
 })
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Getter
@@ -24,17 +21,8 @@ public class ProductPojo {
     @JsonProperty(value = "materialNo")
     private Long materialNo;
 
-    @JsonProperty(value = "month")
-    private String month;
-
-    @JsonProperty(value = "regularSellVolume")
-    private Long regularSellVolume;
-
-    @JsonProperty(value = "promoSellVolume")
-    private Long promoSellVolume;
-
-    @JsonProperty(value = "promoPercentage")
-    private Integer promoPercentage;
+    @JsonProperty(value = "category")
+    private String category;
 
     @JsonProperty(value = "chainSales")
     private List<ChainSalePojo> chainSales;

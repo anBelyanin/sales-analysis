@@ -8,15 +8,19 @@ import lombok.Setter;
 
 import java.util.List;
 
-@JsonPropertyOrder({
-        "salesMonths"
-})
 @JsonIgnoreProperties(ignoreUnknown = true)
+@JsonPropertyOrder({
+        "materialNo",
+        "chains"
+})
 @Getter
 @Setter
-public class ProductAnalysisResponsePojo {
+public class FilteredSalesProductPojo {
 
-    @JsonProperty(value = "salesMonths")
-    private List<SalesMonthPojo> salesMonths;
+    @JsonProperty(value = "materialNo")
+    private Long materialNo;
+
+    @JsonProperty(value = "chains")
+    private List<SalesChainPojo> chains;
 
 }
