@@ -8,17 +8,65 @@
 	"item": [
 		{
 			"name": "product-sales-analysis",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"monthFrom\": \"2021-02\",\n    // monthTo не включается в интервал\n    \"monthTo\": \"2022-03\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/analysis/product-sales-analysis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"analysis",
+						"product-sales-analysis"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "product-sales-filtered",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"chainNameList\":[\"Chain 1\", \"Chain 2\"],\n    \"productMaterialNoList\":[70158202, 70172900]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/analysis/product-sales-filtered",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"analysis",
+						"product-sales-filtered"
+					]
+				}
 			},
 			"response": []
 		}
